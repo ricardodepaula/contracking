@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block 'head' %}
+
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+
+{% endblock %}
+
+{% block 'home' %}
+    <h1>Dashboard</h1>  
+
+{% endblock %}
+
+{% block 'body' %}
+    <h1>Body</h1>
+    
+    {% for fornecedor in fornecedores %}
+        <p>{{fornecedor.nome}}, {{fornecedor.nota}}</p>
+    {% endfor %}
+
+{% endblock %}
